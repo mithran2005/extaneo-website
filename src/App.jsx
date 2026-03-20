@@ -369,7 +369,19 @@ const App = () => {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's build your website</h2>
-                <p className="text-slate-400 text-lg">Fill out this quick brief so I can understand your needs and give you exactly what you want.</p>
+                <p className="text-slate-400 text-lg mb-6">Fill out this quick brief so I can understand your needs and give you exactly what you want.</p>
+                
+                {/* Direct Contact Info */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm font-medium">
+                  <div className="flex items-center gap-2 bg-slate-800/50 text-slate-300 px-5 py-2.5 rounded-full border border-slate-700 shadow-sm">
+                    <Phone className="w-4 h-4 text-indigo-400" />
+                    <span>8939721958</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-slate-800/50 text-slate-300 px-5 py-2.5 rounded-full border border-slate-700 shadow-sm">
+                    <Mail className="w-4 h-4 text-indigo-400" />
+                    <span>mithranm2005@gmail.com</span>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-white text-slate-900 rounded-3xl shadow-xl overflow-hidden">
@@ -380,58 +392,29 @@ const App = () => {
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Project Brief Submitted!</h3>
                     <p className="text-slate-600 max-w-md mx-auto mb-8">
-                      Your details have been sent to our consultant. Please choose a payment method below to proceed with your booking.
+                      Your details have been sent directly to our consultant. We will review your requirements and get back to you within 24 hours.
                     </p>
                     
-                    {/* Payment Options Area */}
-                    <div className="w-full max-w-md space-y-4">
-                      {/* Credit / Debit Card */}
-                      <button className="w-full flex items-center justify-between p-4 border border-slate-200 rounded-2xl hover:border-indigo-600 hover:shadow-md transition-all bg-slate-50">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-blue-100 p-2 rounded-lg">
-                            <CreditCard className="w-6 h-6 text-blue-600" />
-                          </div>
-                          <span className="font-semibold text-slate-800">Credit / Debit Card</span>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-slate-400" />
-                      </button>
-
-                      {/* UPI Options */}
-                      <div className="w-full text-left p-4 border border-slate-200 rounded-2xl bg-slate-50">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="bg-green-100 p-2 rounded-lg">
-                            <Smartphone className="w-6 h-6 text-green-600" />
-                          </div>
-                          <span className="font-semibold text-slate-800">UPI Payment</span>
-                        </div>
-                        <div className="grid grid-cols-3 gap-3">
-                          <button className="flex flex-col items-center justify-center p-3 bg-white border border-slate-200 rounded-xl hover:border-indigo-600 hover:shadow-sm transition-all">
-                            <span className="font-extrabold text-[#1A73E8] text-sm tracking-tight">GPay</span>
-                          </button>
-                          <button className="flex flex-col items-center justify-center p-3 bg-white border border-slate-200 rounded-xl hover:border-indigo-600 hover:shadow-sm transition-all">
-                            <span className="font-extrabold text-[#5F259F] text-sm tracking-tight">PhonePe</span>
-                          </button>
-                          <button className="flex flex-col items-center justify-center p-3 bg-white border border-slate-200 rounded-xl hover:border-indigo-600 hover:shadow-sm transition-all">
-                            <span className="font-extrabold text-[#00B9F1] text-sm tracking-tight">Paytm</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
                     {/* Consultant Contact Info */}
-                    <div className="mt-8 pt-6 border-t border-slate-100 w-full max-w-md">
-                      <p className="text-sm text-slate-500 mb-3">Need help with payment? Contact us:</p>
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm font-medium text-slate-700">
-                         <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-indigo-600"/> 8939721958</div>
-                         <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-indigo-600"/> mithranm2005@gmail.com</div>
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 w-full max-w-sm mx-auto text-left mb-8">
+                      <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Consultant Contact Info</h4>
+                      <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-indigo-100 p-2 rounded-lg"><Phone className="w-5 h-5 text-indigo-600" /></div>
+                          <span className="text-slate-700 font-medium">8939721958</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="bg-indigo-100 p-2 rounded-lg"><Mail className="w-5 h-5 text-indigo-600" /></div>
+                          <span className="text-slate-700 font-medium">mithranm2005@gmail.com</span>
+                        </div>
                       </div>
                     </div>
 
                     <button 
                       onClick={() => navigateTo('home')}
-                      className="mt-8 text-indigo-600 font-medium hover:text-indigo-700"
+                      className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-200"
                     >
-                      I'll pay later, return home
+                      Return to Home Page
                     </button>
                   </div>
                 ) : (
